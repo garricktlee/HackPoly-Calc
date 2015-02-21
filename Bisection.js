@@ -2,6 +2,10 @@ function Bisection(){
 
     // clear the screen before we output anything
     document.getElementById("demo").innerHTML = "";
+    document.getElementById("outn").innerHTML = "";
+    document.getElementById("outc").innerHTML = "";
+    document.getElementById("outfc").innerHTML = "";
+    document.getElementById("outerror").innerHTML = "";
 
 	var nmax = parseInt(document.getElementById("nmax").value);
 	var a = parseInt(document.getElementById("a").value);
