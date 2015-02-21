@@ -1,8 +1,11 @@
 var myHeading = document.querySelector('h1');
 myHeading.innerHTML = 'Test Calculator';
 
-if (confirm("Addition Calculator") === true) {
-	var sum = parseInt(prompt("Enter an Int"));
-	sum += parseInt(prompt("Enter 2nd Int"));
-	document.write(sum);
+function recalc() {
+	var sum = parseInt(document.getElementById('input1').value);
+	sum += parseInt(document.getElementById('input2').value);
+
+	if (sum !== NaN) {
+		document.write(sum);
+	}
 }
