@@ -12,6 +12,7 @@ function Bisection(){
 
 	fa = f(a);
 	fb = f(b);
+	document.getElementById("demo").innerHTML = "<br>"; // clear
 
 	if(fa < 0 && fb < 0 || fa === fb || fa > 0 && fb > 0){
 		//output a, b, fa, fb;
@@ -29,11 +30,14 @@ function Bisection(){
 		fc = f(c);
 
 		//output n, c, fc, error
-		document.getElementById("demo").innerHTML += "<br>" + n + " " + c + " " + fc + " " + error;
+		document.getElementById("outn").innerHTML += "<br>" + n;
+		document.getElementById("outc").innerHTML += "<br>" + c;
+		document.getElementById("outfc").innerHTML += "<br>" + fc;
+		document.getElementById("outerror").innerHTML += "<br>" + error;
 
 		if(Math.abs(error) < e){
 			//output "convergence"
-			document.getElementById("demo").innerHTML += "<br>convergence";
+			document.getElementById("demo").innerHTML = "convergence";
 			return;
 		}
 		if(fa < 0 && fc >0 || fa >0 && fc< 0){
@@ -51,4 +55,12 @@ function f(x){
     f = (x*x*x)-(3*x)+1;
 
     return f;
+}
+
+function fresh(){
+	document.getElementById("demo").innerHTML = ""; // clear
+	document.getElementById("outn").innerHTML = "<ins>n";
+	document.getElementById("outc").innerHTML = "<ins>c<sub>n";
+	document.getElementById("outfc").innerHTML = "<ins>f<sub>x";
+	document.getElementById("outerror").innerHTML = "<ins>error";
 }

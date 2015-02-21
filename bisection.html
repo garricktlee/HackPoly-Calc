@@ -26,11 +26,22 @@
 	      b: <input type="text" name="input2" id="b"><br>
 	      nmax: <input type="text" name="input3" id="nmax"><br>
 	      <br>
-	      <button type="button" value="Submit" onclick="Bisection()">Submit</button><br>
+	      <button type="button" class="btn btn-lg btn-success"value="Submit" onclick="Bisection()">Submit</button>
+			<button type="button" class="btn btn-lg btn-danger" value="Clear" onclick="fresh()">Clear</button>
 	      <br>
 	    </form>
 
-	<p id="demo">Testing for f(x) = x^3-3x+1</p>
+	<p>Testing for f(x) = x^3-3x+1</p>
+
+	 <table style="width:100%">
+	  <tr>
+	    <td id="outn"><ins>n</td>
+	    <td id="outc"><ins>c<sub>n</td>
+	    <td id="outfc"><ins>f(c<sub>n)</td>
+	    <td id="outerror"><ins>error</td>
+	  </tr>
+</table>
+<p id="demo"></p>
 
 	<script src="Bisection.js"></script>
 
