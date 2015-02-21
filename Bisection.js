@@ -1,5 +1,8 @@
 function Bisection(){
 
+    // clear the screen before we output anything
+    document.getElementById("demo").innerHTML = "";
+
 	var nmax = parseInt(document.getElementById("nmax").value);
 	var a = parseInt(document.getElementById("a").value);
 	var b = parseInt(document.getElementById("b").value);
@@ -10,7 +13,7 @@ function Bisection(){
 	fa = f(a);
 	fb = f(b);
 
-	if(fa < 0 && fb < 0 || fa === fb || fa >0 && fb > 0){
+	if(fa < 0 && fb < 0 || fa === fb || fa > 0 && fb > 0){
 		//output a, b, fa, fb;
 		document.getElementById("demo").innerHTML += "<br>" + a + " " + b + " " + fa + " " + fb;
 
@@ -36,19 +39,16 @@ function Bisection(){
 		if(fa < 0 && fc >0 || fa >0 && fc< 0){
 			b = c;
 			fb = fc;
-	}else{
-		a = c;
-		fa = fc;
-	}
-}
-
-
-
+        }else{
+            a = c;
+            fa = fc;
+        }
+    }
 }
 
 function f(x){
-var f = 0.0;
-f = (x*x*x)-(3*x)+1;
+    var f = 0.0;
+    f = (x*x*x)-(3*x)+1;
 
-return f;
+    return f;
 }
