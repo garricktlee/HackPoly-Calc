@@ -1,11 +1,7 @@
 function Bisection(){
 
     // clear the screen before we output anything
-    document.getElementById("demo").innerHTML = "";
-    document.getElementById("outn").innerHTML = "";
-    document.getElementById("outc").innerHTML = "";
-    document.getElementById("outfc").innerHTML = "";
-    document.getElementById("outerror").innerHTML = "";
+    fresh();
 
 	var nmax = parseInt(document.getElementById("nmax").value);
 	var a = parseInt(document.getElementById("a").value);
@@ -65,6 +61,6 @@ function fresh(){
 	document.getElementById("demo").innerHTML = ""; // clear
 	document.getElementById("outn").innerHTML = "<ins>n";
 	document.getElementById("outc").innerHTML = "<ins>c<sub>n";
-	document.getElementById("outfc").innerHTML = "<ins>f<sub>x";
+	document.getElementById("outfc").innerHTML = "<ins>f(c<sub>n)";
 	document.getElementById("outerror").innerHTML = "<ins>error";
 }
